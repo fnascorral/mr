@@ -75,6 +75,7 @@ function onerror(event) {
 onerror.xhrPool = xhrPool;
 
 function RequireRead(url, module) {
+    url += '?_v=' + window._FREENAS_GIT_SHA;
     var xhr = RequireRead.xhrPool.pop();
 
     if(!xhr) {
